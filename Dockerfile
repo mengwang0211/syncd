@@ -3,4 +3,4 @@ WORKDIR /app
 COPY . /app/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
-RUN curl https://syncd.cc/install.sh | bash
+RUN bash install.sh
