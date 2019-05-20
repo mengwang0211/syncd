@@ -1,4 +1,4 @@
-FROM shvid/ubuntu-golang:1.12
+FROM shvid/ubuntu-golang
 WORKDIR /app
 COPY . /app/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
