@@ -1,0 +1,26 @@
+version: '2'
+services:
+
+  syncd-mysql:
+    build:
+      context: ./
+      dockerfile: ./mysql/Dockerfile
+    restart: always
+    container_name: syncd-mysql
+    image: wtx/syncd-mysql
+    hostname: syncd-mysql
+    ports:
+      - 3306
+
+  syncd-server:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: always
+    container_name: syncd-server
+    image: wtx/syncd-server
+    hostname: syncd-server
+    ports:
+      - 8878:8878
+    external_links:
+      - syncd-mysql
