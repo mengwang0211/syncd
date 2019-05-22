@@ -1,6 +1,10 @@
 FROM golang:1.12-alpine
-LABEL maintainer="bigrocs"
-RUN apk add --no-cache gcc musl-dev
+RUN apk update \
+&& apk add --virtual build-dependencies \
+&& apk add gcc \
+&& apk add wget \
+&& apk add git \
+&& apk add make
 WORKDIR /app
 COPY . /app/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
