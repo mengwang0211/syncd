@@ -1,4 +1,4 @@
-FROM golang:1.12-stretch
+FROM golang:1.11-stretch
 #RUN apk add --virtual build-dependencies --repository http://mirrors.aliyun.com/alpine/v3.9/main/ \
 #&& apk add gcc --repository http://mirrors.aliyun.com/alpine/v3.9/main/ \
 #&& apk add wget --repository http://mirrors.aliyun.com/alpine/v3.9/main/ \
