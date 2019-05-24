@@ -7,6 +7,7 @@ FROM golang:1.11-stretch
 RUN apt-get update && apt-get install curl && apt-get install gcc  && apt-get install git
 WORKDIR /app
 COPY . /app/
+RUN mkdir -p /root/.syncd-repo/output
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN echo "make is installed"
