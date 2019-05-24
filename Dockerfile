@@ -11,4 +11,3 @@ RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN echo "make is installed"
 EXPOSE 8878
 CMD ["sh", "/app/install.sh"]
-RUN cd syncd-deploy && ./bin/syncd
