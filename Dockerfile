@@ -1,11 +1,9 @@
 FROM golang:1.12-alpine
-RUN apk add --update bash --repository http://mirrors.ustc.edu.cn/alpine/v3.7/main/ --allow-untrusted
-RUN apk update \
-&& apk add --virtual build-dependencies \
-&& apk add gcc \
-&& apk add wget \
-&& apk add git \
-&& apk add make
+&& apk add --virtual build-dependencies --repository http://mirrors.aliyun.com/alpine/v3.8/main/\
+&& apk add gcc --repository http://mirrors.aliyun.com/alpine/v3.8/main/ \
+&& apk add wget --repository http://mirrors.aliyun.com/alpine/v3.8/main/ \
+&& apk add git --repository http://mirrors.aliyun.com/alpine/v3.8/main/ \
+&& apk add make --repository http://mirrors.aliyun.com/alpine/v3.8/main/
 WORKDIR /app
 COPY . /app/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
