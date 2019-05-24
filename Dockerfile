@@ -11,4 +11,4 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' >/etc/timezone
 RUN echo "make is installed"
 EXPOSE 8878
-RUN sh /app/install.sh
+RUN bash /app/install.sh
