@@ -1,4 +1,5 @@
 FROM golang:1.12-alpine
+RUN apk add --update bash --repository http://mirrors.ustc.edu.cn/alpine/v3.7/main/ --allow-untrusted
 RUN apk update \
 && apk add --virtual build-dependencies \
 && apk add gcc \
