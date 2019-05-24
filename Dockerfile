@@ -4,7 +4,7 @@ FROM golang:1.12-stretch
 #&& apk add wget --repository http://mirrors.aliyun.com/alpine/v3.9/main/ \
 #&& apk add git --repository http://mirrors.aliyun.com/alpine/v3.9/main/ \
 #&& apk add make --repository http://mirrors.aliyun.com/alpine/v3.9/main/
-RUN apt-get update \ && apt-get install gcc \ apt-get install git
+RUN apt-get update && apt-get install gcc  && apt-get install git
 WORKDIR /app
 COPY . /app/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
